@@ -1,67 +1,32 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".MainActivity"
+    android:orientation="vertical">
 
-    <LinearLayout
+
+    <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:layout_margin="15dp"
-        android:layout_above="@id/bookingLayout"
-        android:layout_alignParentTop="true">
+        android:layout_weight="1">
 
-        <TextView
+        <FrameLayout
+            android:id="@+id/meetingFrame"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Booked Rooms"
-            android:textStyle="bold"
-            android:textSize="18dp"/>
+            android:layout_height="wrap_content"/>
 
-        <ListView
-            android:layout_margin="10dp"
-            android:id="@+id/listViewRooms"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
 
-    </LinearLayout>
-
+    </RelativeLayout>
 
     <Button
-        android:id="@+id/btnStop"
-        android:text="Stop"
-
-        android:layout_centerHorizontal="true"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:visibility="gone"/>
-<!--    android:layout_below="@+id/btnStart"-->
-
-    <LinearLayout
-        android:id="@+id/bookingLayout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:layout_alignParentBottom="true">
-
-        <EditText
-            android:id="@+id/etRoomID"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:hint="Room ID"
-            android:layout_weight="1"/>
-
-        <Button
-            android:id="@+id/btnStart"
-            android:text="create"
-            android:layout_centerInParent="true"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"/>
-    </LinearLayout>
+        android:text="Drugs"/>
 
 
 
-</RelativeLayout>
+
+</LinearLayout>
