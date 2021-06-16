@@ -6,31 +6,62 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <EditText
-        android:id="@+id/etRoomID"
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Room ID"/>
+        android:orientation="vertical"
+        android:layout_margin="15dp"
+        android:layout_above="@id/bookingLayout"
+        android:layout_alignParentTop="true">
 
-    <Button
-        android:id="@+id/btnStart"
-        android:text="Start"
-        android:layout_centerInParent="true"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Booked Rooms"
+            android:textStyle="bold"
+            android:textSize="18dp"/>
+
+        <ListView
+            android:layout_margin="10dp"
+            android:id="@+id/listViewRooms"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+    </LinearLayout>
+
+
     <Button
         android:id="@+id/btnStop"
         android:text="Stop"
-        android:layout_below="@+id/btnStart"
+
         android:layout_centerHorizontal="true"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"/>
-
-    <TextView
-        android:id="@+id/tvCountdown"
-        android:visibility="gone"
-        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Joining conference in: 5"
-        android:layout_below="@id/etRoomID"/>
+        android:visibility="gone"/>
+<!--    android:layout_below="@+id/btnStart"-->
+
+    <LinearLayout
+        android:id="@+id/bookingLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_alignParentBottom="true">
+
+        <EditText
+            android:id="@+id/etRoomID"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="Room ID"
+            android:layout_weight="1"/>
+
+        <Button
+            android:id="@+id/btnStart"
+            android:text="create"
+            android:layout_centerInParent="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+    </LinearLayout>
+
+
+
 </RelativeLayout>
