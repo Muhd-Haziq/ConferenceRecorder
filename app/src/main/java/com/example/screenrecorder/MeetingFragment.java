@@ -149,7 +149,8 @@ public class MeetingFragment extends Fragment implements HBRecorderListener, Jit
         etRoomID = view.findViewById(R.id.etRoomID);
         roomListView = view.findViewById(R.id.listViewRooms);
 
-        jitsiMeetView = new JitsiMeetView(getActivity());
+        jitsiMeetView = new JitsiMeetView(MeetingFragment.this);
+
 
         /* ---------- INITIALIZING ROOM MANAGERS - START ---------- */
 
